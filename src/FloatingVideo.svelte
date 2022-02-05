@@ -15,7 +15,6 @@
 
   //Close floating video
   function closePip() {
-    autoPointer = true;
     hidden = true;
     src = null;
   }
@@ -149,5 +148,8 @@
   #pip-content {
     user-select: none;
     pointer-events: none !important;
+  }
+  iframe {
+    border-width: 0px;
   }
 </style>
