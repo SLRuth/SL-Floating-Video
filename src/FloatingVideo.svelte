@@ -64,7 +64,6 @@
     elmnt.style[posVertical] = "0px";
   });
 
-  //Resize floating video
 </script>
 
 <div bind:this={elmnt} id="pip" class:hidden data-resizable>
