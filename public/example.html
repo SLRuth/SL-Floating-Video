@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>Floating Video Test</title>
+    <script src="bundle.js"></script>
+    <style>
+      body {
+        margin: 0;
+      }
+      .container {
+        display: flex;
+        justify-content: center;
+        min-height: 100vh;
+        align-items: center;
+      }
+      .p3 {
+        padding: 3px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="p3">
+        <button
+          data-floating-video-src="https://www.youtube.com/embed/QgD5A2v3cp0"
+        >
+          Test Floating Video 1
+        </button>
+      </div>
+      <div class="p3">
+        <button
+          data-floating-video-src="https://www.youtube.com/embed/5qap5aO4i9A"
+        >
+          Test Floating Video 2
+        </button>
+      </div>
+    </div>
+    <floating-video></floating-video>
+    <script>
+      const fv = document.querySelector("floating-video");
+      fv.posVertical = "top";
+      fv.posHorizontal = "left";
+      const fvElements = document.querySelectorAll("[data-floating-video-src]");
+      fvElements.forEach((fvElement) => {
+        fvElement.addEventListener("click", function (e) {
+          const src = e.target.dataset.floatingVideoSrc;
+          fv.src = src;
+        });
+      });
+    </script>
+  </body>
+</html>
