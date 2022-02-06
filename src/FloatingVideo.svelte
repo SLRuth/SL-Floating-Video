@@ -63,7 +63,6 @@
     elmnt.style[posHorizontal] = "0px";
     elmnt.style[posVertical] = "0px";
   });
-
 </script>
 
 <div bind:this={elmnt} id="pip" class:hidden data-resizable>
@@ -75,9 +74,9 @@
     />
     <div id="close-pip" on:click={closePip} />
   </div>
-  <div id="pip-content" class:nonePointer>
+  <div id="pip-content">
     {#if src}
-      <iframe title="Floating Video Iframe" {src} />
+      <iframe title="Floating Video Iframe" class:nonePointer {src} />
     {/if}
   </div>
 </div>
@@ -143,12 +142,12 @@
   div {
     pointer-events: auto;
   }
-  iframe,
-  #pip-content {
+  iframe.nonePointer {
     user-select: none;
     pointer-events: none !important;
   }
   iframe {
     border-width: 0px;
+    pointer-events: auto;
   }
 </style>
