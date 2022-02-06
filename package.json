@@ -1,6 +1,9 @@
 {
-  "name": "svelte-app",
+  "name": "floating-video-component",
   "version": "1.0.0",
+  "description": "show a floating video",
+  "type": "module",
+  "main": "src/main.js",
   "private": true,
   "scripts": {
     "build": "rollup -c",
@@ -19,5 +22,16 @@
   },
   "dependencies": {
     "sirv-cli": "^2.0.0"
-  }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@gitlab.com/RHRivasG/floating-video-component.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://gitlab.com/RHRivasG/floating-video-component/issues"
+  },
+  "homepage": "https://gitlab.com/RHRivasG/floating-video-component#readme"
 }
