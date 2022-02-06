@@ -4,7 +4,7 @@
   "description": "show a floating video",
   "type": "module",
   "main": "src/main.js",
-  "private": true,
+  "public": true,
   "scripts": {
     "build": "rollup -c",
     "dev": "rollup -c -w",
