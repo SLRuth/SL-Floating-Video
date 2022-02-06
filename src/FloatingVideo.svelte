@@ -63,6 +63,9 @@
     elmnt.style[posHorizontal] = "0px";
     elmnt.style[posVertical] = "0px";
   });
+
+  $: if (elmnt) posVertical = elmnt.style[posVertical] = "0px";
+  $: if (elmnt) posHorizontal = elmnt.style[posHorizontal] = "0px";
 </script>
 
 <div bind:this={elmnt} id="pip" class:hidden data-resizable>
