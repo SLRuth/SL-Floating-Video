@@ -1,109 +1,209 @@
-*Psst — looking for a more complete solution? Check out [SvelteKit](https://kit.svelte.dev), the official framework for building web applications of all sizes, with a beautiful development experience and flexible filesystem-based routing.*
+# Floating Video Component
 
-*Looking for a shareable component template instead? You can [use SvelteKit for that as well](https://kit.svelte.dev/docs#packaging) or the older [sveltejs/component-template](https://github.com/sveltejs/component-template)*
+See a video on a floating player like this:
 
----
+![screencapture-file-home-ruth-Documents-Shocklogic-Codes-floating-video-component-public-example-html-2022-02-07-13_33_27.png](:/be78a8688f3845188823a54c2e7f3b91)
 
-# svelte app
-
-This is a project template for [Svelte](https://svelte.dev) apps. It lives at https://github.com/sveltejs/template.
-
-To create a new project based on this template using [degit](https://github.com/Rich-Harris/degit):
-
-```bash
-npx degit sveltejs/template svelte-app
-cd svelte-app
-```
-
-*Note that you will need to have [Node.js](https://nodejs.org) installed.*
-
+The floating video is a iframe container so the video link should be a embed
 
 ## Get started
 
-Install the dependencies...
+---
+
+### Install the NPM Package
 
 ```bash
-cd svelte-app
-npm install
+npm i floating-video-component
 ```
 
-...then start [Rollup](https://rollupjs.org):
+Add in the head of the index.html of your project:
 
-```bash
-npm run dev
+```html
+<script src="node_modules/floating-video-component/dist/bundle.js"></script>
 ```
 
-Navigate to [localhost:8080](http://localhost:8080). You should see your app running. Edit a component file in `src`, save it, and reload the page to see your changes.
+### Or Use CDN
 
-By default, the server will only respond to requests from localhost. To allow connections from other computers, edit the `sirv` commands in package.json to include the option `--host 0.0.0.0`.
+Add in the head of the index.html of your project:
 
-If you're using [Visual Studio Code](https://code.visualstudio.com/) we recommend installing the official extension [Svelte for VS Code](https://marketplace.visualstudio.com/items?itemName=svelte.svelte-vscode). If you are using other editors you may need to install a plugin in order to get syntax highlighting and intellisense.
-
-## Building and running in production mode
-
-To create an optimised version of the app:
-
-```bash
-npm run build
+```html
+<script src="https://unpkg.com/floating-video-component/dist/bundle.js"></script>
 ```
 
-You can run the newly built app with `npm run start`. This uses [sirv](https://github.com/lukeed/sirv), which is included in your package.json's `dependencies` so that the app will work when you deploy to platforms like [Heroku](https://heroku.com).
+## Features
 
+---
 
-## Single-page app mode
+- You can move it if you put the cursor in the area:
+  ![8c7cc4c9605a209b90e30d0e98b92919.png](:/d4e7d68ffed44d9ea337265a6c1b9db7)
+- You can delete it if you click in the "x":
+  ![973351b2303529a5a2666e727b4424fb.png](:/4060a1be932248b6ad0b2df8f6189528)
+- You can resize it if you drag this area:
+  ![4c27a05f963d8b8cd21f0198e4c5b40f.png](:/4c0e77a3716c4ea2812bb945d53a8715)
 
-By default, sirv will only respond to requests that match files in `public`. This is to maximise compatibility with static fileservers, allowing you to deploy your app anywhere.
+## How to use it
 
-If you're building a single-page app (SPA) with multiple routes, sirv needs to be able to respond to requests for *any* path. You can make it so by editing the `"start"` command in package.json:
+---
 
-```js
-"start": "sirv public --single"
+Include in your template the next tag:
+
+```html
+<floating-video></floating-video>
 ```
 
-## Using TypeScript
+Later, in your Javascript, get the element and you can set the next variables:
 
-This template comes with a script to set up a TypeScript development environment, you can run it immediately after cloning the template with:
-
-```bash
-node scripts/setupTypeScript.js
+```html
+<script>
+  const fv = document.querySelector("floating-video");
+  fv.src = "https://www.youtube.com/embed/QgD5A2v3cp0" /*video embed link*/;
+  fv.posVertical = "bottom" /*the bottom position is default*/;
+  fv.posHorizontal = "right" /*the right position is default*/;
+</script>
 ```
 
-Or remove the script via:
+## Starter template
 
-```bash
-rm scripts/setupTypeScript.js
+---
+
+```html
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>Floating Video Test</title>
+    <!-- Use CDN -->
+    <script src="https://unpkg.com/floating-video-component/dist/bundle.js"></script>
+    <!-- Use NPM Package -->
+    <!-- 
+    <script src="node_modules/floating-video-component/dist/bundle.js"></script>
+ -->
+    <style>
+      body {
+        margin: 0;
+      }
+      .container {
+        display: flex;
+        justify-content: center;
+        min-height: 100vh;
+        align-items: center;
+      }
+      .p3 {
+        padding: 3px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="p3">
+        <button
+          data-floating-video-src="https://www.youtube.com/embed/QgD5A2v3cp0"
+        >
+          Test Floating Video 1
+        </button>
+      </div>
+      <div class="p3">
+        <button
+          data-floating-video-src="https://www.youtube.com/embed/5qap5aO4i9A"
+        >
+          Test Floating Video 2
+        </button>
+      </div>
+    </div>
+
+    <floating-video></floating-video>
+    <script>
+      const fv = document.querySelector("floating-video");
+      const fvElements = document.querySelectorAll("[data-floating-video-src]");
+      fvElements.forEach((fvElement) => {
+        fvElement.addEventListener("click", function (e) {
+          const src = e.target.dataset.floatingVideoSrc;
+          fv.src = src;
+        });
+      });
+    </script>
+  </body>
+</html>
 ```
 
-If you want to use `baseUrl` or `path` aliases within your `tsconfig`, you need to set up `@rollup/plugin-alias` to tell Rollup to resolve the aliases. For more info, see [this StackOverflow question](https://stackoverflow.com/questions/63427935/setup-tsconfig-path-in-svelte).
+## Custom position
 
-## Deploying to the web
+---
 
-### With [Vercel](https://vercel.com)
+For default, the floating video is the bottom and the right of the screen. You can set the position:
 
-Install `vercel` if you haven't already:
-
-```bash
-npm install -g vercel
+```html
+<script>
+  const fv = document.querySelector("floating-video");
+  fv.posVertical = "top"; <!-- If you want the floating video in the top of the screen -->
+  fv.posVertical = "bottom"; <!-- If you want the floating video in the bottom of the screen -->
+  fv.posHorizontal = "left"; <!-- If you want the floating video in the left of the screen -->
+  fv.posHorizontal = "right"; <!-- If you want the floating video in the right of the screen -->
+</script>
 ```
 
-Then, from within your project folder:
+Example template:
 
-```bash
-cd public
-vercel deploy --name my-project
+```html
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>Floating Video Test</title>
+    <script src="https://unpkg.com/floating-video-component/dist/bundle.js"></script>
+    <style>
+      body {
+        margin: 0;
+      }
+      .container {
+        display: flex;
+        justify-content: center;
+        min-height: 100vh;
+        align-items: center;
+      }
+      .p3 {
+        padding: 3px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="p3">
+        <button
+          data-floating-video-src="https://www.youtube.com/embed/QgD5A2v3cp0"
+        >
+          Test Floating Video 1
+        </button>
+      </div>
+      <div class="p3">
+        <button
+          data-floating-video-src="https://www.youtube.com/embed/5qap5aO4i9A"
+        >
+          Test Floating Video 2
+        </button>
+      </div>
+    </div>
+    <floating-video></floating-video>
+
+    <script>
+      const fv = document.querySelector("floating-video");
+
+      /* Custom Position */
+      fv.posVertical = "top";
+      fv.posHorizontal = "left";
+
+      const fvElements = document.querySelectorAll("[data-floating-video-src]");
+      fvElements.forEach((fvElement) => {
+        fvElement.addEventListener("click", function (e) {
+          const src = e.target.dataset.floatingVideoSrc;
+          fv.src = src;
+        });
+      });
+    </script>
+  </body>
+</html>
 ```
 
-### With [surge](https://surge.sh/)
+And would look like this:
 
-Install `surge` if you haven't already:
-
-```bash
-npm install -g surge
-```
-
-Then, from within your project folder:
-
-```bash
-npm run build
-surge public my-project.surge.sh
-```
+![screencapture-file-home-ruth-Documents-Shocklogic-Codes-floating-video-component-public-example-html-2022-02-08-09_25_56.png](:/cb72537a7b7e419f8a3a5f0ffff70f42)
