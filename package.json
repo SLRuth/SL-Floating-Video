@@ -30,7 +30,11 @@
     "type": "git",
     "url": "git+ssh://git@gitlab.com/RHRivasG/floating-video-component.git"
   },
-  "keywords": [],
+  "keywords": [
+    "front-end",
+    "web",
+    "web-component"
+  ],
   "author": "",
   "license": "ISC",
   "bugs": {
