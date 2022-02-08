@@ -2,13 +2,12 @@
 
 See a video on a floating player like this:
 
-![screencapture-file-home-ruth-Documents-Shocklogic-Codes-floating-video-component-public-example-html-2022-02-07-13_33_27.png](:/be78a8688f3845188823a54c2e7f3b91)
+![floating video preview](https://gitlab.com/RHRivasG/floating-video-component/-/raw/main/docs/be78a8688f3845188823a54c2e7f3b91.png)
 
 The floating video is a iframe container so the video link should be a embed
 
 ## Get started
 
----
 
 ### Install the NPM Package
 
@@ -32,18 +31,14 @@ Add in the head of the index.html of your project:
 
 ## Features
 
----
-
-- You can move it if you put the cursor in the area:
-  ![8c7cc4c9605a209b90e30d0e98b92919.png](:/d4e7d68ffed44d9ea337265a6c1b9db7)
-- You can delete it if you click in the "x":
-  ![973351b2303529a5a2666e727b4424fb.png](:/4060a1be932248b6ad0b2df8f6189528)
-- You can resize it if you drag this area:
-  ![4c27a05f963d8b8cd21f0198e4c5b40f.png](:/4c0e77a3716c4ea2812bb945d53a8715)
+- You can move it if you put the cursor in the area: <br /> 
+![move](https://gitlab.com/RHRivasG/floating-video-component/-/raw/main/docs/d4e7d68ffed44d9ea337265a6c1b9db7.png) <br /> 
+- You can delete it if you click in the "x":  <br /> 
+  ![delete](https://gitlab.com/RHRivasG/floating-video-component/-/raw/main/docs/4060a1be932248b6ad0b2df8f6189528.png)  <br /> 
+- You can resize it if you drag this area:  <br /> 
+  ![resize](https://gitlab.com/RHRivasG/floating-video-component/-/raw/main/docs/4c0e77a3716c4ea2812bb945d53a8715.png)  <br /> 
 
 ## How to use it
-
----
 
 Include in your template the next tag:
 
@@ -63,8 +58,6 @@ Later, in your Javascript, get the element and you can set the next variables:
 ```
 
 ## Starter template
-
----
 
 ```html
 <!DOCTYPE html>
@@ -127,8 +120,6 @@ Later, in your Javascript, get the element and you can set the next variables:
 ```
 
 ## Custom position
-
----
 
 For default, the floating video is the bottom and the right of the screen. You can set the position:
 
@@ -206,4 +197,4 @@ Example template:
 
 And would look like this:
 
-![screencapture-file-home-ruth-Documents-Shocklogic-Codes-floating-video-component-public-example-html-2022-02-08-09_25_56.png](:/cb72537a7b7e419f8a3a5f0ffff70f42)
+![floating video top left](https://gitlab.com/RHRivasG/floating-video-component/-/raw/main/docs/cb72537a7b7e419f8a3a5f0ffff70f42.png)
