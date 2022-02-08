@@ -126,10 +126,10 @@ For default, the floating video is the bottom and the right of the screen. You c
 ```html
 <script>
   const fv = document.querySelector("floating-video");
-  fv.posVertical = "top"; <!-- If you want the floating video in the top of the screen -->
-  fv.posVertical = "bottom"; <!-- If you want the floating video in the bottom of the screen -->
-  fv.posHorizontal = "left"; <!-- If you want the floating video in the left of the screen -->
-  fv.posHorizontal = "right"; <!-- If you want the floating video in the right of the screen -->
+  fv.posVertical = "top"; /*If you want the floating video in the top of the screen */
+  fv.posVertical = "bottom"; /* If you want the floating video in the bottom of the screen */
+  fv.posHorizontal = "left"; /* If you want the floating video in the left of the screen */
+  fv.posHorizontal = "right"; /* If you want the floating video in the right of the screen */
 </script>
 ```
 
