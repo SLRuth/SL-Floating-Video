@@ -5,6 +5,9 @@
   "type": "module",
   "main": "src/main.js",
   "public": true,
+  "files": [
+    "dist/"
+  ],
   "scripts": {
     "build": "rollup -c",
     "dev": "rollup -c -w",
