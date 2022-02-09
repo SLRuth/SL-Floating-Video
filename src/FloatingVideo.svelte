@@ -152,5 +152,7 @@
   iframe {
     border-width: 0px;
     pointer-events: auto;
+    min-width: 325px;
+    min-height: 225px;
   }
 </style>
