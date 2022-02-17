@@ -1,13 +1,12 @@
 # Floating Video Component
 
-See a video on a floating player like this:
+See a video on a floating player like this: [Demo](https://floating-video-component.glitch.me/)
 
 ![floating video preview](https://gitlab.com/RHRivasG/floating-video-component/-/raw/main/docs/be78a8688f3845188823a54c2e7f3b91.png)
 
 The floating video is a iframe container so the video link should be a embed
 
-## Get started
-
+## 🚀 Get started
 
 ### Install the NPM Package
 
@@ -29,16 +28,16 @@ Add in the head of the index.html of your project:
 <script src="https://unpkg.com/floating-video-component/dist/bundle.js"></script>
 ```
 
-## Features
+## ✨ Features
 
-- You can move it if you put the cursor in the area: <br /> 
-![move](https://gitlab.com/RHRivasG/floating-video-component/-/raw/main/docs/d4e7d68ffed44d9ea337265a6c1b9db7.png) <br /> 
-- You can delete it if you click in the "x":  <br /> 
-  ![delete](https://gitlab.com/RHRivasG/floating-video-component/-/raw/main/docs/4060a1be932248b6ad0b2df8f6189528.png)  <br /> 
-- You can resize it if you drag this area:  <br /> 
-  ![resize](https://gitlab.com/RHRivasG/floating-video-component/-/raw/main/docs/4c0e77a3716c4ea2812bb945d53a8715.png)  <br /> 
+- You can move it if you put the cursor in the area: <br />
+  ![move](https://gitlab.com/RHRivasG/floating-video-component/-/raw/main/docs/d4e7d68ffed44d9ea337265a6c1b9db7.png) <br />
+- You can delete it if you click in the "x": <br />
+  ![delete](https://gitlab.com/RHRivasG/floating-video-component/-/raw/main/docs/4060a1be932248b6ad0b2df8f6189528.png) <br />
+- You can resize it if you drag this area: <br />
+  ![resize](https://gitlab.com/RHRivasG/floating-video-component/-/raw/main/docs/4c0e77a3716c4ea2812bb945d53a8715.png) <br />
 
-## How to use it
+## 🛠️ How to use it
 
 Include in your template the next tag:
 
@@ -57,7 +56,7 @@ Later, in your Javascript, get the element and you can set the next variables:
 </script>
 ```
 
-## Starter template
+## 🔥 Starter template
 
 ```html
 <!DOCTYPE html>
@@ -119,17 +118,21 @@ Later, in your Javascript, get the element and you can set the next variables:
 </html>
 ```
 
-## Custom position
+## 🔧 Custom position
 
 For default, the floating video is the bottom and the right of the screen. You can set the position:
 
 ```html
 <script>
   const fv = document.querySelector("floating-video");
-  fv.posVertical = "top"; /*If you want the floating video in the top of the screen */
-  fv.posVertical = "bottom"; /* If you want the floating video in the bottom of the screen */
-  fv.posHorizontal = "left"; /* If you want the floating video in the left of the screen */
-  fv.posHorizontal = "right"; /* If you want the floating video in the right of the screen */
+  fv.posVertical =
+    "top"; /*If you want the floating video in the top of the screen */
+  fv.posVertical =
+    "bottom"; /* If you want the floating video in the bottom of the screen */
+  fv.posHorizontal =
+    "left"; /* If you want the floating video in the left of the screen */
+  fv.posHorizontal =
+    "right"; /* If you want the floating video in the right of the screen */
 </script>
 ```
 
