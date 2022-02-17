@@ -68,13 +68,9 @@
   $: if (elmnt) posHorizontal = elmnt.style[posHorizontal] = "0px";
 </script>
 
-<div bind:this={elmnt} id="pip" class:hidden data-resizable>
+<div bind:this={elmnt} id="pip" class:hidden>
   <div class="topbar-floating-video">
-    <div
-      id="drag-pip"
-      on:mousedown|preventDefault={onMouseDown}
-      data-drag="pip"
-    />
+    <div id="drag-pip" on:mousedown|preventDefault={onMouseDown} />
     <div id="close-pip" on:click={closePip} />
   </div>
   <div id="pip-content">
@@ -153,6 +149,6 @@
     border-width: 0px;
     pointer-events: auto;
     min-width: 325px;
-    min-height: 225px;
+    min-height: 200px;
   }
 </style>
