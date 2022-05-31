@@ -1,6 +1,6 @@
 {
-  "name": "floating-video-component",
-  "version": "1.0.6",
+  "name": "sl-floating-video",
+  "version": "1.0.0",
   "description": "show a floating video",
   "type": "module",
   "main": "src/main.js",

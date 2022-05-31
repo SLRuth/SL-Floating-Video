@@ -1,4 +1,4 @@
-<svelte:options tag="floating-video" />
+<svelte:options tag="sl-floating-video" />
 
 <script>
   import { onMount } from "svelte";
