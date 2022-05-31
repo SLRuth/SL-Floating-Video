@@ -11,13 +11,13 @@ The floating video is a iframe container so the video link should be a embed
 ### Install the NPM Package
 
 ```bash
-npm i floating-video-component
+npm i sl-floating-video
 ```
 
 Add in the head of the index.html of your project:
 
 ```html
-<script src="node_modules/floating-video-component/dist/bundle.js"></script>
+<script src="node_modules/sl-floating-video/dist/bundle.js"></script>
 ```
 
 ### Or Use CDN
@@ -25,7 +25,7 @@ Add in the head of the index.html of your project:
 Add in the head of the index.html of your project:
 
 ```html
-<script src="https://unpkg.com/floating-video-component/dist/bundle.js"></script>
+<script src="https://unpkg.com/sl-floating-video/dist/bundle.js"></script>
 ```
 
 ## ✨ Features
@@ -42,14 +42,14 @@ Add in the head of the index.html of your project:
 Include in your template the next tag:
 
 ```html
-<floating-video></floating-video>
+<sl-floating-video></sl-floating-video>
 ```
 
 Later, in your Javascript, get the element and you can set the next variables:
 
 ```html
 <script>
-  const fv = document.querySelector("floating-video");
+  const fv = document.querySelector("sl-floating-video");
   fv.src = "https://www.youtube.com/embed/QgD5A2v3cp0" /*video embed link*/;
   fv.posVertical = "bottom" /*the bottom position is default*/;
   fv.posHorizontal = "right" /*the right position is default*/;
@@ -65,10 +65,10 @@ Later, in your Javascript, get the element and you can set the next variables:
     <meta charset="utf-8" />
     <title>Floating Video Test</title>
     <!-- Use CDN -->
-    <script src="https://unpkg.com/floating-video-component/dist/bundle.js"></script>
+    <script src="https://unpkg.com/sl-floating-video/dist/bundle.js"></script>
     <!-- Use NPM Package -->
     <!-- 
-    <script src="node_modules/floating-video-component/dist/bundle.js"></script>
+    <script src="node_modules/sl-floating-video/dist/bundle.js"></script>
  -->
     <style>
       body {
@@ -124,7 +124,7 @@ For default, the floating video is the bottom and the right of the screen. You c
 
 ```html
 <script>
-  const fv = document.querySelector("floating-video");
+  const fv = document.querySelector("sl-floating-video");
   fv.posVertical =
     "top"; /*If you want the floating video in the top of the screen */
   fv.posVertical =
@@ -144,7 +144,7 @@ Example template:
   <head>
     <meta charset="utf-8" />
     <title>Floating Video Test</title>
-    <script src="https://unpkg.com/floating-video-component/dist/bundle.js"></script>
+    <script src="https://unpkg.com/sl-floating-video/dist/bundle.js"></script>
     <style>
       body {
         margin: 0;
@@ -177,10 +177,10 @@ Example template:
         </button>
       </div>
     </div>
-    <floating-video></floating-video>
+    <sl-floating-video></sl-floating-video>
 
     <script>
-      const fv = document.querySelector("floating-video");
+      const fv = document.querySelector("sl-floating-video");
 
       /* Custom Position */
       fv.posVertical = "top";
