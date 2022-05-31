@@ -26,19 +26,22 @@
   "dependencies": {
     "sirv-cli": "^2.0.0"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+ssh://git@gitlab.com/RHRivasG/floating-video-component.git"
-  },
   "keywords": [
     "front-end",
     "web",
     "web-component"
   ],
+  "directories": {
+    "doc": "docs"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/SLRuth/SL-Floating-Video-Component.git"
+  },
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://gitlab.com/RHRivasG/floating-video-component/issues"
+    "url": "https://github.com/SLRuth/SL-Floating-Video-Component/issues"
   },
-  "homepage": "https://gitlab.com/RHRivasG/floating-video-component#readme"
+  "homepage": "https://github.com/SLRuth/SL-Floating-Video-Component#readme"
 }
