@@ -103,9 +103,9 @@ Later, in your Javascript, get the element and you can set the next variables:
       </div>
     </div>
 
-    <floating-video></floating-video>
+    <sl-floating-video></sl-floating-video>
     <script>
-      const fv = document.querySelector("floating-video");
+      const fv = document.querySelector("sl-floating-video");
       const fvElements = document.querySelectorAll("[data-floating-video-src]");
       fvElements.forEach((fvElement) => {
         fvElement.addEventListener("click", function (e) {
